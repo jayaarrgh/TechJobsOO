@@ -29,16 +29,16 @@
             return Value;
         }
 
-        // override object.Equals
+        // override object.Equals                       // I Dont really understand what this is doing
         public override bool Equals(object obj)
         {
 
-            if (obj == null || GetType() != obj.GetType())
+            if (obj == null || GetType() != obj.GetType())  // especially the 2nd half of this disjunction
             {
                 return false;
             }
             
-            return (obj as JobField).ID == ID;
+            return (obj as JobField).ID == ID;              // or this 'else' return
         }
 
         // override object.GetHashCode
